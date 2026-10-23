@@ -44,10 +44,6 @@ opsbridge_demo/
 │       └─ portal_b.html
 ├─ engine/
 │   └─ submitter.py     # Playwright automation loop
-├─ logs/
-│   └─ opsbridge.log
-├─ screenshots/
-│   └─ (captured on failure)
 ├─ tests/
 │   └─ test_*.py         # pytest suite
 └─ main.py               # entry point (cli)
