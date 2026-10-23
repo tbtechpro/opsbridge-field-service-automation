@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Portal B – Job Submission with Document</title>
+</head>
+<body>
+    <h2>Portal B – Submit Job with Document</h2>
+    <form method="post" enctype="multipart/form-data" action="/portal_b">
+        <label>Job ID: <input name="job_id" required></label><br><br>
+        <label>Company Name: <input name="company" required></label><br><br>
+        <label>Contact Person: <input name="contact"></label><br><br>
+        <label>Phone: <input name="phone" type="tel"></label><br><br>
+        <label>Document (PDF or Image): <input type="file" name="document" accept=".pdf,.jpg,.png" required></label><br><br>
+        <button type="submit">Submit to Portal B</button>
+    </form>
+</body>
+</html>

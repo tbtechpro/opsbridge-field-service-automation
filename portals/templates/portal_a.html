@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Portal A – Job Submission</title>
+</head>
+<body>
+    <h2>Portal A – Submit Job</form>
+    <form method="post" action="/portal_a">
+        <label>Job ID: <input name="job_id" required></label><br><br>
+        <label>Customer Name: <input name="customer" required></label><br><br>
+        <label>Address: <input name="address" required></label><br><br>
+        <label>Work Description: <input name="work_description"></label><br><br>
+        <label>Priority: <select name="priority"><option value="Low">Low</option><option value="Medium">Medium</option><option value="High">High</option></select></label><br><br>
+        <label>Due Date (YYYY-MM-DD): <input name="due_date" type="date"></label><br><br>
+        <button type="submit">Submit to Portal A</button>
+    </form>
+</body>
+</html>

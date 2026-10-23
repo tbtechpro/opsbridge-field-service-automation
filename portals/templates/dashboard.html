@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>OpsBridge Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>OpsBridge – Job Submission Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Job ID</th>
+                <th>Customer / Company</th>
+                <th>Portal</th>
+                <th>Status</th>
+                <th>Attempt</th>
+                <th>Due Date</th>
+                <th>Submitted At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job['job_id'] }}</td>
+                <td>{{ job['customer'] or job['company'] or '' }}</td>
+                <td>{{ job['portal'] or '' }}</td>
+                <td>{{ job['status'] or '' }}</td>
+                <td>{{ job['attempt_count'] or '' }}</td>
+                <td>{{ job['due_date'] or '' }}</td>
+                <td>{{ job['submitted_at'] or '' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="/portal_a">Submit another job to Portal A</a> | <a href="/portal_b">Submit another job to Portal B</a></p>
+</body>
+</html>

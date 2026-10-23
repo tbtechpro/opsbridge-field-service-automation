@@ -1,0 +1,22 @@
+portals:
+  - name: A
+    url: http://localhost:5000/portal_a
+    fields:
+      job_id: job_id
+      customer: customer
+      address: address
+      work_description: work_description
+      priority: priority
+      due_date: due_date
+  - name: B
+    url: http://localhost:5000/portal_b
+    fields:
+      job_id: job_id
+      company: company
+      contact: contact
+      phone: phone
+    upload_field: document
+    upload_path: data/sample.pdf
+timeout_seconds: 30
+max_retries: 3
+sample_document: data/sample.pdf
