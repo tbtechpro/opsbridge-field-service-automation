@@ -29,21 +29,19 @@ A local demonstration of transferring fictional AroFlo-style job records into tw
 ## Project structure
 ```
 opsbridge_demo/
-├─ .gitignore            # env, venv, logs, screenshots, db, config.yaml
+├─ .gitignore            # env, venv, logs, screenshots, db
 ├─ README.md             # you are reading it
 ├─ prd.md                # product requirement document
 ├─ implementation_plan.md# milestone roadmap
-├─ AGENTS.md             # this file, summarises the assessor’s guidance
 ├─ config.yaml           # portal URLs, timeouts, retry limits, sample-document path
 ├─ data/
-│   ├─ jobs.csv          # sample CSV (created later)
-│   └─ sample.pdf        # dummy upload file (created later)
+│   └─ sample.pdf        # dummy upload file
 ├─ portals/
 │   ├─ app.py            # Flask dashboard + portal simulators
 │   ├─ portal_a/
-│   │   └─ routes.py
+│   │   └─ portal_a.html
 │   └─ portal_b/
-│       └─ routes.py
+│       └─ portal_b.html
 ├─ engine/
 │   └─ submitter.py     # Playwright automation loop
 ├─ logs/
@@ -78,13 +76,15 @@ The pytest test suite consists of several categories:
 
 Running the core test suite (without `RUN_E2E=1`):
 ```
+$env:RUN_E2E = ""
 python -m pytest tests/ -v
 # 10 passed, 3 skipped
 ```
 
-Running the full test suite with `RUN_E2E=1`:
+Running the full test suite with `RUN_E2E=1` (PowerShell):
 ```
-RUN_E2E=1 python -m pytest tests/ -v
+$env:RUN_E2E = "1"
+python -m pytest tests/ -v
 # 13 passed, 0 failed, 0 skipped
 ```
 
